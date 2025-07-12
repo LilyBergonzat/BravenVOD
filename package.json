@@ -1,4 +1,5 @@
 {
+  "name": "braven_vod_aggregator",
   "type": "module",
   "main": "./main.js",
   "scripts": {

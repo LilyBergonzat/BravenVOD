@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "main": "./main.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "youtube-api": "^3.0.2"
+  }
+}

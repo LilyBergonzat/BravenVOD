@@ -3,10 +3,12 @@
   "type": "module",
   "main": "./main.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "server": "node server.js"
   },
   "dependencies": {
     "dotenv": "^17.2.0",
+    "express": "^5.1.0",
     "youtube-api": "^3.0.2"
   }
 }

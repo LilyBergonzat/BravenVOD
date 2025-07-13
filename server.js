@@ -1,10 +1,12 @@
 import { configDotenv } from 'dotenv';
 import express from 'express';
+import cors from 'cors';
 
 configDotenv({ quiet: true });
 
 const app = express();
 
+app.use(cors());
 app.set('trust proxy', Number(process.env.TRUST_PROXY) ?? 0);
 
 app.get('/', (req, res) => {

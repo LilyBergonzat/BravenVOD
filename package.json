@@ -4,8 +4,8 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "npm run server",
-    "aggregator": "node src/aggregator.js",
-    "server": "node src/server.js"
+    "aggregator": "node src/Aggregator.js",
+    "server": "node src/Server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

@@ -1,0 +1,1 @@
+export const regExpEscape = str => str.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");

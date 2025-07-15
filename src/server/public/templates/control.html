@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Atomic Braven VOD Bingo - Télécommande</title>
+    <link rel="stylesheet" type="text/css" href="/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="/css/control.css" />
+</head>
+<body>
+    <div id="player"></div>
+    <div class="controls">
+        <button type="button" id="random_pick">Nouveau tirage</button>
+    </div>
+
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript">
+        const WS_URL = `ws://{{wsHost}}:{{wsPort}}`;
+        const WS_KEY = `{{key}}`;
+        const AGGREGATOR_JSON_URL = `{{aggregatorJsonURL}}`
+    </script>
+    <script type="text/javascript" src="/js/control.js"></script>
+</body>
+</html>

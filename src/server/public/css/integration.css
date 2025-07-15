@@ -1,0 +1,11 @@
+body {
+    margin-top: -300px;
+    margin-bottom: -300px;
+    min-height: calc(100vh + 300px);
+    overflow: hidden;
+}
+
+iframe {
+    width: 100vw;
+    height: calc(100vh + 600px);
+}

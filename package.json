@@ -1,15 +1,19 @@
 {
   "name": "braven_vod_aggregator",
   "type": "module",
-  "main": "./main.js",
+  "main": "./src/server.js",
   "scripts": {
-    "start": "node .",
-    "server": "node server.js"
+    "start": "npm run server",
+    "aggregator": "node src/aggregator.js",
+    "server": "node src/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "forwarded-for": "^1.1.0",
+    "ws": "^8.18.3",
     "youtube-api": "^3.0.2"
   }
 }

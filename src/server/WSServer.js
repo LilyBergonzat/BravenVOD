@@ -26,6 +26,7 @@ export class WSServer {
 
         server.on('connection', (socket, request) => {
             socket.on('message', message => {
+                console.log(`Received WS message...`);
                 this.socketMessageHandler(request, message);
             });
         });
@@ -38,6 +39,7 @@ export class WSServer {
         const messageData = JSON.parse(readableMessage);
 
         if (!messageData.key) {
+            console.log(`WS message does not have a key, ignoring.`);
             return;
         }
 
@@ -46,11 +48,13 @@ export class WSServer {
         const correctKey = createHash('sha256').update(keyData).digest('base64');
 
         if (messageData.key !== correctKey) {
+            console.log(`WS message key is invalid, ignoring.`);
             return;
         }
 
         delete messageData.key;
 
+        console.log(`WS message is valid, sending through.`);
         this.messageHandler(messageData);
     }
 

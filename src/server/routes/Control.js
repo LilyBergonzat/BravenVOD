@@ -18,8 +18,7 @@ export default class extends AbstractRoute {
         const key = createHash('sha256').update(keyData).digest('base64');
 
         return this.render('control.html', response, {
-            wsHost: request.hostname,
-            wsPort: process.env.WEBSOCKET_SERVER_PORT,
+            wsURL: process.env.WEBSOCKET_URL,
             key,
             aggregatorJsonURL: process.env.AGGREGATOR_JSON_URL,
         });

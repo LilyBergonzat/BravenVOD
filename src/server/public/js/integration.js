@@ -73,8 +73,8 @@ const pauseHandler = ({ videoId, time }) => {
         return;
     }
 
-    player.pauseVideo();
     player.seekTo(time);
+    player.pauseVideo();
 };
 
 const messageHandler = message => {

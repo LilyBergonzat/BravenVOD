@@ -1,6 +1,19 @@
-const ws = new WebSocket(WS_URL);
+let ws = new WebSocket(WS_URL);
 const randomPickButton = document.querySelector('#random_pick');
 let player;
+
+const wsConnect = () => {
+    ws = new WebSocket(WS_URL);
+
+    ws.onopen = () => {
+        console.log('Connected to WS');
+    };
+
+    ws.onclose = () => {
+        console.log('Disconnected from WS. Reconnecting...');
+        wsConnect();
+    };
+};
 
 const onPlayerReady = (event) => {
     console.log('Player ready');
@@ -106,4 +119,5 @@ const pickRandomVideo = async () => {
     newVideo(randomId, randomStart);
 };
 
+wsConnect();
 randomPickButton.addEventListener('click', pickRandomVideo);

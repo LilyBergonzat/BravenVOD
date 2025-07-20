@@ -32,7 +32,7 @@ const newVideoHandler = ({ videoId, startSeconds }) => {
 };
 
 const seekHandler = ({ videoId, time }) => {
-    if (!player || !player.getVideoData || !player.getVideoData().video_id) {
+    if (!player || !player.getVideoData || !player.getVideoData()?.video_id) {
         return;
     }
 
@@ -45,7 +45,7 @@ const seekHandler = ({ videoId, time }) => {
 };
 
 const playHandler = ({ videoId, time }) => {
-    if (!player || !player.getVideoData || !player.getVideoData().video_id) {
+    if (!player || !player.getVideoData || !player.getVideoData()?.video_id) {
         return;
     }
 
@@ -64,7 +64,7 @@ const playHandler = ({ videoId, time }) => {
 }
 
 const pauseHandler = ({ videoId, time }) => {
-    if (!player || !player.getVideoData || !player.getVideoData().video_id) {
+    if (!player || !player.getVideoData || !player.getVideoData()?.video_id) {
         return;
     }
 
